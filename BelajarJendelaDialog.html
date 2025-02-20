@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jendela Dialog</title>
+</head>
+<body>
+    <h2>Ini dialog alert</h2>
+    <button onClick="alert('Selamat Datang di Website Kami')">Klik Saya</button>
+    
+    <hr>
+
+    <h2>Ini dialog confirm</h2>
+    <script>
+        function yakin(){
+        var yakin = confirm("Apakah kamu yakin akan mengunjungi petanikode?");
+
+        if (yakin) {
+            window.location = "https://www.petanikode.com";
+        } else {
+            alert("Baiklah, lain kali saja ya");
+        }
+    }
+    </script>
+    <button onClick="yakin()">Klik Saya</button>
+    
+    <hr>
+
+    <h2>Ini dialog prompt</h2>
+    <script>
+
+        function tanya(){
+        var nama = prompt("Masukkan nama kamu : ", "Dimassuvar");
+
+        if (nama != null && nama != "") {
+            alert("Halo " + nama + ", Selamat datang di website kami");
+        } else {
+            alert("Halo, Selamat datang di website kami");
+        }
+    }
+    </script>
+    <button onClick="tanya()">Klik Saya</button>
+</body>
+</html>
